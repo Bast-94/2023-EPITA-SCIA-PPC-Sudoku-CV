@@ -4,6 +4,17 @@ using Microsoft.Z3;
 
 namespace Sudoku.z3
 {
+
+	//Quelques suggestions: comme vous êtes partis d'un code similaire, je vous met un lien vers les commentaires que j'ai mis à vos camarades:
+	// https://github.com/jsboigeEpita/2023-EPITA-SCIA-PPC-Sudoku-NLP/blob/8cf051bfcae9f6d2bf279c9f1896f88049470dcd/Sudoku.Z3Solver/Z3Solver.cs
+	// Visiblement il serait intéressant de tester une implémentation en vecteurs de bits: https://sites.google.com/site/modante/programs_description
+	//Et puis sinon il serait intéressant de regarder du côté des tactiques 
+	// https://microsoft.github.io/z3guide/docs/strategies/intro
+	//https://microsoft.github.io/z3guide/programming/Z3%20Python%20-%20Readonly/Strategies/
+	//https://github.com/Z3Prover/z3/blob/master/examples/dotnet/Program.cs#L209
+
+
+
 	public class z3Solver : ISudokuSolver
 	{
 		public z3Solver()

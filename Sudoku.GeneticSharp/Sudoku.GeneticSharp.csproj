@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="GeneticSharp" Version="3.1.4" />
+      <PackageReference Include="GeneticSharp.Extensions" Version="3.1.4" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Sudoku.Backtracking\Sudoku.Backtracking.csproj" />
+        <ProjectReference Include="..\Sudoku.Shared\Sudoku.Shared.csproj" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,26 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <array id="grid" note="x[i][j] is the value at row i and col j" size="[9][9]"> 1..9 </array>
+  </variables>
+  <constraints>
+    <allDifferent note="imposing distinct values on each row and each column">
+      <matrix> grid[][] </matrix>
+    </allDifferent>
+    <group class="blocks" note="imposing distinct values on each block">
+      <allDifferent> %... </allDifferent>
+      <args> grid[0..2][0..2] </args>
+      <args> grid[0..2][3..5] </args>
+      <args> grid[0..2][6..8] </args>
+      <args> grid[3..5][0..2] </args>
+      <args> grid[3..5][3..5] </args>
+      <args> grid[3..5][6..8] </args>
+      <args> grid[6..8][0..2] </args>
+      <args> grid[6..8][3..5] </args>
+      <args> grid[6..8][6..8] </args>
+    </group>
+    <instantiation class="clues" note="imposing clues">
+      <list> grid[0][4..5] grid[0][7] grid[1][3..4] grid[1][8] grid[2][1..2] grid[2][7] grid[3][6] grid[3][8] grid[4][1] grid[4][3] grid[4][5] grid[4][7] grid[5][0] grid[5][2] grid[6][1] grid[6][6..7] grid[7][0] grid[7][4..5] grid[8][1] grid[8][3..4] </list>
+      <values> 9 4 3 5 1 7 8 9 4 2 8 6 2 1 5 1 2 7 5 2 9 6 5 4 9 7 </values>
+    </instantiation>
+  </constraints>
+</instance>

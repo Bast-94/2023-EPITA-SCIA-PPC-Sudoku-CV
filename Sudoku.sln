@@ -16,11 +16,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Puzzles", "Puzzles", "{5351
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku.Backtracking", "Sudoku.Backtracking\Sudoku.Backtracking.csproj", "{1C50AE77-2CE9-4BD8-ADFE-3C3A255FFC78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.Demo", "Sudoku.Demo\Sudoku.Demo.csproj", "{AD78958C-0B81-436B-BB99-9485B7045C98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku.Demo", "Sudoku.Demo\Sudoku.Demo.csproj", "{AD78958C-0B81-436B-BB99-9485B7045C98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.ChocoSolver", "Sudoku.ChocoSolver\Sudoku.ChocoSolver.csproj", "{85B499F5-EC65-414B-B093-43ED02A26625}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku.ChocoSolver", "Sudoku.ChocoSolver\Sudoku.ChocoSolver.csproj", "{85B499F5-EC65-414B-B093-43ED02A26625}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.z3", "Sudoku.z3\Sudoku.z3.csproj", "{6DFB8967-8272-4686-9799-FFCEF1B0DE34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku.z3", "Sudoku.z3\Sudoku.z3.csproj", "{6DFB8967-8272-4686-9799-FFCEF1B0DE34}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqToZ3", "LinqToZ3\LinqToZ3.csproj", "{F0EA346A-B230-445B-9D1F-F5F29E145B46}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku.ColorGraph", "Sudoku.ColorGraph\Sudoku.ColorGraph.csproj", "{224A4C69-2DC9-40CA-AFFE-CE4D0EF8DA8A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku.OrTools", "Sudoku.OrTools\Sudoku.OrTools.csproj", "{930422F3-A562-4EF9-96AE-C2D38707BD3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku.ParticleSwarmOptimization", "Sudoku.ParticleSwarmOptimization\Sudoku.ParticleSwarmOptimization.csproj", "{2BAC1CE2-CE94-43D9-8E6C-D3749A52FE51}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Z3.LinqBinding", "Z3.LinqBinding\Z3.LinqBinding.csproj", "{451158D9-16A6-4646-8C3C-B7A2606BEA58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku.GeneticSharp", "Sudoku.GeneticSharp\Sudoku.GeneticSharp.csproj", "{22DDB3A3-6000-4964-A974-D640AB72E019}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +64,30 @@ Global
 		{6DFB8967-8272-4686-9799-FFCEF1B0DE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DFB8967-8272-4686-9799-FFCEF1B0DE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DFB8967-8272-4686-9799-FFCEF1B0DE34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0EA346A-B230-445B-9D1F-F5F29E145B46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0EA346A-B230-445B-9D1F-F5F29E145B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0EA346A-B230-445B-9D1F-F5F29E145B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0EA346A-B230-445B-9D1F-F5F29E145B46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{224A4C69-2DC9-40CA-AFFE-CE4D0EF8DA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{224A4C69-2DC9-40CA-AFFE-CE4D0EF8DA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{224A4C69-2DC9-40CA-AFFE-CE4D0EF8DA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{224A4C69-2DC9-40CA-AFFE-CE4D0EF8DA8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{930422F3-A562-4EF9-96AE-C2D38707BD3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{930422F3-A562-4EF9-96AE-C2D38707BD3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{930422F3-A562-4EF9-96AE-C2D38707BD3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{930422F3-A562-4EF9-96AE-C2D38707BD3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BAC1CE2-CE94-43D9-8E6C-D3749A52FE51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BAC1CE2-CE94-43D9-8E6C-D3749A52FE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BAC1CE2-CE94-43D9-8E6C-D3749A52FE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BAC1CE2-CE94-43D9-8E6C-D3749A52FE51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{451158D9-16A6-4646-8C3C-B7A2606BEA58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{451158D9-16A6-4646-8C3C-B7A2606BEA58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{451158D9-16A6-4646-8C3C-B7A2606BEA58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{451158D9-16A6-4646-8C3C-B7A2606BEA58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22DDB3A3-6000-4964-A974-D640AB72E019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DDB3A3-6000-4964-A974-D640AB72E019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DDB3A3-6000-4964-A974-D640AB72E019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DDB3A3-6000-4964-A974-D640AB72E019}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

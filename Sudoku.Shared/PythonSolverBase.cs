@@ -123,6 +123,28 @@ namespace Sudoku.Shared
         private static async Task InstallEmbedded()
         {
 
+			// // install in local directory. if you don't set it will install in local app data of your user account
+			//Python.Deployment.Installer.InstallPath = Path.GetFullPath(".");
+			//
+
+
+			//Runtime.PythonDLL = "python37.dll";
+			//Python.Deployment.Installer.Source = new Installer.DownloadInstallationSource()
+			//{
+			//    DownloadUrl = @"https://www.python.org/ftp/python/3.7.3/python-3.7.3-embed-amd64.zip",
+			//};
+
+			//Runtime.PythonDLL = "python38.dll";
+			//Python.Deployment.Installer.Source = new Installer.DownloadInstallationSource()
+			//{
+			//    DownloadUrl = @"https://www.python.org/ftp/python/3.8.9/python-3.8.9-embed-amd64.zip",
+			//};
+
+			//Runtime.PythonDLL = "python39.dll";
+			//Python.Deployment.Installer.Source = new Installer.DownloadInstallationSource()
+			//{
+			//    DownloadUrl = @"https://www.python.org/ftp/python/3.9.9/python-3.9.9-embed-amd64.zip",
+			//};
 			//Runtime.PythonDLL = "python37.dll";
 
             // // set the download source
@@ -136,14 +158,21 @@ namespace Sudoku.Shared
             //
             // see what the installer is doing
 
-			Runtime.PythonDLL = "python38.dll";
+			Runtime.PythonDLL = "python310.dll";
 			Python.Deployment.Installer.Source = new Installer.DownloadInstallationSource()
-            {
-                DownloadUrl = @"https://www.python.org/ftp/python/3.8.9/python-3.8.9-embed-amd64.zip",
-            };
+			{
+				DownloadUrl = @"https://www.python.org/ftp/python/3.10.8/python-3.10.8-embed-amd64.zip",
+			};
 
 
+            //Runtime.PythonDLL = "python311.dll";
+            //Python.Deployment.Installer.Source = new Installer.DownloadInstallationSource()
+            //{
+            //    DownloadUrl = @"https://www.python.org/ftp/python/3.11.2/python-3.11.2-embed-amd64.zip",
+            //};
 
+
+            // see what the installer is doing
             Installer.LogMessage += Console.WriteLine;
             //
             // install from the given source
