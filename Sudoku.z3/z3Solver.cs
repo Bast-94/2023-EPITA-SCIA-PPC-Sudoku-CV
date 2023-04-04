@@ -26,9 +26,11 @@ namespace Sudoku.z3
 
 			using (Context ctx = new Context())
             {
-				int[][] grid = s.Cells;
-                Solver solver = ctx.MkSolver();
+				int[][] grid = s.Cells; // Faire un attribut de classe
+
+                Solver solver = ctx.MkSolver(); // Faire un attribut de classe
                 // Créer une variable pour chaque case de la grille
+                // remplacer la double boucle la méthode init_first_constraints(Context ctx )
                 IntExpr[,] vars = new IntExpr[9, 9];
                 for (int i = 0; i < 9; i++)
                 {
@@ -40,12 +42,14 @@ namespace Sudoku.z3
                 }
 
                 // Ajouter les contraintes de rangée, de colonne et de région
+                // remplacer la double boucle la méthode init_all_constraints(Context ctx)
                 for (int i = 0; i < 9; i++)
                 {
                     for (int j = 0; j < 9; j++)
                     {
                         // Contrainte de rangée
                         BoolExpr rowConstraint = ctx.MkTrue();
+                        // remplacer la boucle la méthode private BoolExpr init_row_constraints(Context ctx, int i, int j)
                         for (int k = 0; k < 9; k++)
                         {
                             if (k != j)
@@ -56,6 +60,7 @@ namespace Sudoku.z3
                         }
 
                         // Contrainte de colonne
+                        // remplacer la boucle la méthode private BoolExpr init_col_constraints(Context ctx, int i, int j)
                         BoolExpr colConstraint = ctx.MkTrue();
                         for (int k = 0; k < 9; k++)
                         {
@@ -66,6 +71,7 @@ namespace Sudoku.z3
                         }
 
                         // Contrainte de région
+                        // remplacer la boucle la méthode private BoolExpr  get_region_constraints(Context ctx, int i, int j)
                         int rowRegion = (i / 3) * 3;
                         int colRegion = (j / 3) * 3;
                         BoolExpr regionConstraint = ctx.MkTrue();
@@ -81,11 +87,13 @@ namespace Sudoku.z3
                         } 
                     
                         // Ajouter les contraintes à la grille
+                        // Remplacer les asserts par la méthode private void assert_constraints(Context ctx )
                         solver.Assert(rowConstraint);
                         solver.Assert(colConstraint);
                         solver.Assert(regionConstraint);
 
                         // Ajouter les valeurs connues de la grille
+                        // Méthode private void assert_known_values (Context ctx , int i , int j)
                         if (grid[i][j] != 0)
                         {
                             solver.Assert(ctx.MkEq(vars[i, j], ctx.MkInt(grid[i][j])));
@@ -95,6 +103,7 @@ namespace Sudoku.z3
                 }
                 
                 // Résoudre le sudoku
+                // Faire une méthode pour renvoyer la résolution.
 				SudokuGrid r = new SudokuGrid();
                 if (solver.Check() == Status.SATISFIABLE)
                 {
